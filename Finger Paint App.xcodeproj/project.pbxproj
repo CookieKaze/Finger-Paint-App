@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0430E61DD6723700AA1493 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0430E51DD6723700AA1493 /* DrawingView.m */; };
+		1D0430EC1DD67A3F00AA1493 /* MyPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0430EB1DD67A3F00AA1493 /* MyPoint.m */; };
+		1D0430EF1DD67BBF00AA1493 /* MyLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0430EE1DD67BBF00AA1493 /* MyLine.m */; };
 		1D4D7AB51DD6427B004F997F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D7AB41DD6427B004F997F /* main.m */; };
 		1D4D7AB81DD6427B004F997F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D7AB71DD6427B004F997F /* AppDelegate.m */; };
 		1D4D7ABB1DD6427B004F997F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D7ABA1DD6427B004F997F /* ViewController.m */; };
@@ -16,6 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D0430E41DD6723700AA1493 /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		1D0430E51DD6723700AA1493 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+		1D0430EA1DD67A3F00AA1493 /* MyPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPoint.h; sourceTree = "<group>"; };
+		1D0430EB1DD67A3F00AA1493 /* MyPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPoint.m; sourceTree = "<group>"; };
+		1D0430ED1DD67BBF00AA1493 /* MyLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLine.h; sourceTree = "<group>"; };
+		1D0430EE1DD67BBF00AA1493 /* MyLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLine.m; sourceTree = "<group>"; };
 		1D4D7AB01DD6427B004F997F /* Finger Paint App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Finger Paint App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4D7AB41DD6427B004F997F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D4D7AB61DD6427B004F997F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +70,12 @@
 				1D4D7AB91DD6427B004F997F /* ViewController.h */,
 				1D4D7ABA1DD6427B004F997F /* ViewController.m */,
 				1D4D7ABC1DD6427B004F997F /* Main.storyboard */,
+				1D0430E41DD6723700AA1493 /* DrawingView.h */,
+				1D0430E51DD6723700AA1493 /* DrawingView.m */,
+				1D0430ED1DD67BBF00AA1493 /* MyLine.h */,
+				1D0430EE1DD67BBF00AA1493 /* MyLine.m */,
+				1D0430EA1DD67A3F00AA1493 /* MyPoint.h */,
+				1D0430EB1DD67A3F00AA1493 /* MyPoint.m */,
 				1D4D7AB31DD6427B004F997F /* Supporting Files */,
 			);
 			path = "Finger Paint App";
@@ -151,8 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D4D7ABB1DD6427B004F997F /* ViewController.m in Sources */,
+				1D0430EC1DD67A3F00AA1493 /* MyPoint.m in Sources */,
 				1D4D7AB81DD6427B004F997F /* AppDelegate.m in Sources */,
 				1D4D7AB51DD6427B004F997F /* main.m in Sources */,
+				1D0430EF1DD67BBF00AA1493 /* MyLine.m in Sources */,
+				1D0430E61DD6723700AA1493 /* DrawingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +327,7 @@
 				1D4D7AC91DD6427B004F997F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
