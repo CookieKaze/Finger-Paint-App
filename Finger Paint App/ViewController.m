@@ -19,7 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    self.drawingView.myLines = [[NSMutableSet alloc] init];
     
 
 }

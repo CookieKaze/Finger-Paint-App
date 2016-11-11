@@ -15,6 +15,8 @@
 
 -(void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     self.myCurrentLine = [MyLine new];
+    [self.myLines addObject: self.myCurrentLine];
+
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -25,18 +27,23 @@
     MyPoint * mypoint = [[MyPoint alloc] initWithOldPoint:oldPoint andNewPoint:currentPoint];
     [self.myCurrentLine.myPoints addObject:mypoint];
     [self setNeedsDisplay];
+
+}
+
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self setNeedsDisplay];
 }
 
 -(void) drawRect:(CGRect)rect {
     CGContextSetStrokeColorWithColor(UIGraphicsGetCurrentContext(), [UIColor greenColor].CGColor);
-    //Get first point out
     
-    
-    for (MyPoint * myPoint in self.myCurrentLine.myPoints) {
-        if ([self.myCurrentLine.myPoints indexOfObject:myPoint] == 0) {
-            CGContextMoveToPoint(UIGraphicsGetCurrentContext(), myPoint.oldPoint.x, myPoint.newPoint.y);
-        }else {
-            CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), myPoint.oldPoint.x, myPoint.newPoint.y);
+    for (MyLine * myLine in self.myLines) {
+        for (MyPoint * myPoint in myLine.myPoints) {
+            if ([myLine.myPoints indexOfObject:myPoint] == 0) {
+                CGContextMoveToPoint(UIGraphicsGetCurrentContext(), myPoint.oldPoint.x, myPoint.newPoint.y);
+            }else {
+                CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), myPoint.oldPoint.x, myPoint.newPoint.y);
+            }
         }
     }
     CGContextStrokePath(UIGraphicsGetCurrentContext());

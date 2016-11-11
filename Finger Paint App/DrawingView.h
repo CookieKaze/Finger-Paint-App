@@ -12,4 +12,5 @@
 
 @interface DrawingView : UIView
 @property MyLine * myCurrentLine;
+@property NSMutableSet * myLines;
 @end
