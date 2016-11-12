@@ -12,4 +12,5 @@
 
 @interface MyLine : NSObject
 @property NSMutableArray<MyPoint *> * myPoints;
+@property UIColor * lineColour;
 @end

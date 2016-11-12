@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,14 +18,80 @@
                         <viewControllerLayoutGuide type="top" id="Eax-4L-QQD"/>
                         <viewControllerLayoutGuide type="bottom" id="cE9-Oh-uS0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="241-Px-Cfu" customClass="DrawingView">
+                    <view key="view" contentMode="scaleToFill" id="241-Px-Cfu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfC-p8-WFM" customClass="DrawingView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAm-ia-221">
+                                <rect key="frame" x="0.0" y="625" width="44" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="bTs-C5-whS"/>
+                                    <constraint firstAttribute="width" constant="44" id="dZK-Pp-W7D"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="setRedColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JuT-we-KP8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVn-aW-4bG">
+                                <rect key="frame" x="88" y="625" width="44" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="BdT-MI-Dh4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Ik3-yf-lFK"/>
+                                    <constraint firstAttribute="height" constant="42" id="cxT-y2-GCD"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="setBlueColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kVW-Ta-MtB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9XD-BX-411">
+                                <rect key="frame" x="132" y="625" width="44" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="3lr-uQ-gq0"/>
+                                    <constraint firstAttribute="height" constant="42" id="kja-T1-kQC"/>
+                                    <constraint firstAttribute="width" constant="44" id="yCK-l0-4hC"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="setBlackColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cs0-WU-4Nz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyy-nH-fl6">
+                                <rect key="frame" x="44" y="625" width="44" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="5q9-Mg-ehj"/>
+                                    <constraint firstAttribute="width" constant="44" id="DAB-SD-5B9"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="setGreenColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MAY-yj-wfj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="cE9-Oh-uS0" firstAttribute="top" secondItem="hAm-ia-221" secondAttribute="bottom" id="5yq-jF-Ixx"/>
+                            <constraint firstItem="Qyy-nH-fl6" firstAttribute="leading" secondItem="hAm-ia-221" secondAttribute="trailing" id="HMm-YF-s8u"/>
+                            <constraint firstItem="cE9-Oh-uS0" firstAttribute="top" secondItem="vfC-p8-WFM" secondAttribute="bottom" constant="50" id="IIa-Y5-zFe"/>
+                            <constraint firstItem="vfC-p8-WFM" firstAttribute="leading" secondItem="241-Px-Cfu" secondAttribute="leading" id="Kc9-Ig-gwW"/>
+                            <constraint firstItem="9XD-BX-411" firstAttribute="leading" secondItem="lVn-aW-4bG" secondAttribute="trailing" id="Lhb-Cg-pko"/>
+                            <constraint firstItem="cE9-Oh-uS0" firstAttribute="top" secondItem="lVn-aW-4bG" secondAttribute="bottom" id="Pi6-BD-njJ"/>
+                            <constraint firstItem="vfC-p8-WFM" firstAttribute="top" secondItem="241-Px-Cfu" secondAttribute="top" id="X6O-y3-R4Z"/>
+                            <constraint firstItem="cE9-Oh-uS0" firstAttribute="top" secondItem="Qyy-nH-fl6" secondAttribute="bottom" id="nS9-tE-Ris"/>
+                            <constraint firstItem="cE9-Oh-uS0" firstAttribute="top" secondItem="9XD-BX-411" secondAttribute="bottom" id="r2w-DW-zNB"/>
+                            <constraint firstAttribute="trailing" secondItem="vfC-p8-WFM" secondAttribute="trailing" id="wCZ-eT-NNv"/>
+                            <constraint firstItem="lVn-aW-4bG" firstAttribute="leading" secondItem="Qyy-nH-fl6" secondAttribute="trailing" id="xCZ-En-WMH"/>
+                            <constraint firstItem="hAm-ia-221" firstAttribute="leading" secondItem="241-Px-Cfu" secondAttribute="leadingMargin" constant="-16" id="zLd-ox-dxw"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="drawingView" destination="241-Px-Cfu" id="Y66-R7-dmK"/>
+                        <outlet property="drawingView" destination="vfC-p8-WFM" id="1Q7-xp-Bjv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

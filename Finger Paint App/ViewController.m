@@ -12,7 +12,7 @@
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet DrawingView *drawingView;
-
+@property UIColor * currentColor;
 @end
 
 @implementation ViewController
@@ -21,9 +21,28 @@
     [super viewDidLoad];
     
     self.drawingView.myLines = [[NSMutableSet alloc] init];
-    
-
+    self.drawingView.myPenColor = [UIColor blackColor];
 }
 
+- (IBAction)setRedColor:(UIButton *)sender {
+    self.currentColor = [UIColor redColor];
+    [self setPenColour];
+}
+- (IBAction)setGreenColor:(UIButton *)sender {
+    self.currentColor = [UIColor greenColor];
+    [self setPenColour];
+}
+- (IBAction)setBlueColor:(UIButton *)sender {
+    self.currentColor = [UIColor blueColor];
+    [self setPenColour];
+}
+- (IBAction)setBlackColor:(UIButton *)sender {
+    self.currentColor = [UIColor blackColor];
+    [self setPenColour];
+}
 
+-(void) setPenColour {
+    self.drawingView.myPenColor = self.currentColor;
+    
+}
 @end

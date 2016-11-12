@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         _myPoints = [[NSMutableArray alloc] init];
+        _lineColour = [UIColor blackColor];
     }
     return self;
 }
